@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: portfolio-website
-          image: YOUR_DOCKERHUB_USERNAME/portfolio-website:latest
+image: seharaly/portfolio-website:latest
           ports:
             - containerPort: 3000
