@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: portfolio-website
+  template:
+    metadata:
+      labels:
+        app: portfolio-website
+    spec:
+      containers:
+        - name: portfolio-website
+          image: YOUR_DOCKERHUB_USERNAME/portfolio-website:latest
+          ports:
+            - containerPort: 3000
